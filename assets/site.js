@@ -34,3 +34,23 @@
 
 // Show the page once Tailwind has generated its styles.
 requestAnimationFrame(function () { requestAnimationFrame(function () { document.documentElement.classList.add('tw-ready'); }); });
+
+// Hero parallax, as on the original site: as you scroll through the hero, the
+// background zooms in (data-parallax-scale = extra scale at the end) and the
+// text drifts up (data-parallax-y = pixels at the end).
+(function () {
+  var root = document.querySelector('[data-parallax-root]');
+  if (!root || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var scaled = root.querySelectorAll('[data-parallax-scale]');
+  var moved = root.querySelectorAll('[data-parallax-y]');
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var p = Math.min(Math.max(window.scrollY / (root.offsetHeight || 1), 0), 1);
+    scaled.forEach(function (el) { el.style.transform = p ? 'scale(' + (1 + parseFloat(el.dataset.parallaxScale) * p) + ')' : ''; });
+    moved.forEach(function (el) { el.style.transform = p ? 'translateY(' + (parseFloat(el.dataset.parallaxY) * p) + 'px)' : ''; });
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
