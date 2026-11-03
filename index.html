@@ -55,7 +55,7 @@
   .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; overflow: hidden;
     background:
       linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.35) 60%, rgba(255,255,255,.9) 100%),
-      url("images/hero.jpg") center/cover no-repeat,
+      url("https://media.base44.com/images/public/6a82005a72dba70ef997dff7/3babd4718_generated_image.png") center/cover no-repeat,
       linear-gradient(115deg, #eef2f7 0%, #f9fbfd 45%, #e6ecf3 100%); }
   .hero::before { /* subtle corridor lines when no photo is present */
     content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
@@ -115,7 +115,13 @@
   .big-num small { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .14em; margin-top: 24px; color: #aab3c2; }
   .dist p { font-size: 20px; font-weight: 300; color: #d8dce3; margin-bottom: 36px; }
   .certs { display: flex; gap: 12px; flex-wrap: wrap; }
-  .cert { border: 1px solid #3a3f4a; padding: 12px 18px; }
+  .certs img { height: 72px; width: auto; background: #fff; padding: 8px; }
+  .logos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: #3a3f4a; border: 1px solid #3a3f4a; margin-top: 72px; }
+  .logo-tile { background: #fff; display: grid; place-items: center; padding: 22px 26px; aspect-ratio: 16 / 7; transition: background .2s; }
+  .logo-tile img { max-width: 100%; max-height: 64px; object-fit: contain; filter: grayscale(1); opacity: .85; transition: filter .25s, opacity .25s, transform .25s; }
+  .logo-tile:hover img, .logo-tile:focus-visible img { filter: none; opacity: 1; transform: scale(1.04); }
+  @media (max-width: 960px) { .logos { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 700px) { .logos { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 860px) { .dist-grid { grid-template-columns: 1fr; } }
 
   /* Values */
@@ -173,7 +179,7 @@
       <div class="eyebrow mono">GR — Medical equipment distribution</div>
       <h1><span>Supplying</span><span class="r">the operating</span><span class="r">room</span></h1>
       <div class="hero-foot">
-        <a class="featured" href="#contact">
+        <a class="featured" href="hemoclear.html">
           <span class="mono tag">Featured</span>
           <span>Discover <strong>HemoClear</strong>, the novel device for autologous blood transfusion</span>
           <span class="arrow" aria-hidden="true">→</span>
@@ -245,8 +251,33 @@
         <div class="big-num reveal">20<small>Manufacturers</small></div>
         <div class="reveal">
           <p>A curated network of international manufacturers, selected for engineering precision and clinical reliability, distributed nationwide under IMEMA's quality system.</p>
-          <div class="certs mono"><span class="cert">ISO 9001 / UKAS</span><span class="cert">HTCERT</span></div>
+          <div class="certs">
+            <img src="https://imema.gr/wp-content/uploads/2024/01/ISO-9001UKAS-RGB.jpg" alt="ISO 9001 / UKAS certified" loading="lazy">
+            <img src="https://imema.gr/wp-content/uploads/2024/01/HTCert-logo-1348.png" alt="HTCERT" loading="lazy">
+          </div>
         </div>
+      </div>
+      <div class="logos reveal">
+          <a class="logo-tile" href="https://www.medtronic.com/gr-el/index.html" target="_blank" rel="noopener" title="Medtronic"><img src="https://imema.gr/wp-content/uploads/2022/09/medtronic-logo-1024x288-1.jpg" alt="Medtronic" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.evergenbio.com/" target="_blank" rel="noopener" title="Evergen"><img src="https://media.base44.com/images/public/6a82005a72dba70ef997dff7/4d1f62b70_Evergen.jpg" alt="Evergen" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.stille.se/" target="_blank" rel="noopener" title="Stille"><img src="https://imema.gr/wp-content/uploads/2022/09/stillelogo-1024x312-1.jpg" alt="Stille" loading="lazy"></a>
+          <a class="logo-tile" href="http://www.mikromed.eu/" target="_blank" rel="noopener" title="Mikromed"><img src="https://imema.gr/wp-content/uploads/2022/09/mikromed-logo-1024x288-1.jpg" alt="Mikromed" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.rebstock.de/?lang=en" target="_blank" rel="noopener" title="Rebstock"><img src="https://imema.gr/wp-content/uploads/2022/09/rebstock-1024x312-1.jpg" alt="Rebstock" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.prodorth.com/" target="_blank" rel="noopener" title="Prodorth"><img src="https://imema.gr/wp-content/uploads/2022/09/prodorth-logo-1024x288-1.jpg" alt="Prodorth" loading="lazy"></a>
+          <a class="logo-tile" href="https://titamed.com/en" target="_blank" rel="noopener" title="Titamed"><img src="https://imema.gr/wp-content/uploads/2023/06/titamed-logo.jpg" alt="Titamed" loading="lazy"></a>
+          <a class="logo-tile" href="https://cardiainnovation.com/" target="_blank" rel="noopener" title="Cardia"><img src="https://imema.gr/wp-content/uploads/2022/09/cardia-logo-1024x288-1.jpg" alt="Cardia" loading="lazy"></a>
+          <a class="logo-tile" href="https://biomatlante.com/en/" target="_blank" rel="noopener" title="Biomatlante"><img src="https://imema.gr/wp-content/uploads/2022/09/biomatlante_logo-1024x312-1.jpg" alt="Biomatlante" loading="lazy"></a>
+          <a class="logo-tile" href="https://temedmedical.com/" target="_blank" rel="noopener" title="Temed"><img src="https://imema.gr/wp-content/uploads/2022/09/temed-logo-1024x288-1.jpg" alt="Temed" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.promecon-medical.com/en" target="_blank" rel="noopener" title="Promecon"><img src="https://imema.gr/wp-content/uploads/2024/01/promecon-logo.jpg" alt="Promecon" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.mondomed.be/en" target="_blank" rel="noopener" title="Mondomed"><img src="https://imema.gr/wp-content/uploads/2022/09/mondomed-logo-1024x288-1.jpg" alt="Mondomed" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.htkdmedical.com/home" target="_blank" rel="noopener" title="HTKD"><img src="https://imema.gr/wp-content/uploads/2024/04/htkd-logo.jpg" alt="HTKD" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.betatechmedical.com/en-US" target="_blank" rel="noopener" title="Betatech"><img src="https://imema.gr/wp-content/uploads/2024/04/betatech-logo.jpg" alt="Betatech" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.tecno.com.pk/home.html" target="_blank" rel="noopener" title="Tecno"><img src="https://imema.gr/wp-content/uploads/2024/04/tecno-logo.jpg" alt="Tecno" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.medeurope.eu/" target="_blank" rel="noopener" title="Medeurope"><img src="https://imema.gr/wp-content/uploads/2022/12/medeurope-logo.jpg" alt="Medeurope" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.hemoclear.com/" target="_blank" rel="noopener" title="HemoClear"><img src="https://media.base44.com/images/public/6a82005a72dba70ef997dff7/175320473_hemoclear.jpg" alt="HemoClear" loading="lazy"></a>
+          <a class="logo-tile" href="https://tisgenx.com/" target="_blank" rel="noopener" title="TisGenX"><img src="https://media.base44.com/images/public/6a82005a72dba70ef997dff7/a44ad0518_tisgenx.jpg" alt="TisGenX" loading="lazy"></a>
+          <a class="logo-tile" href="https://www.medial.com.tr/" target="_blank" rel="noopener" title="Medial"><img src="https://media.base44.com/images/public/6a82005a72dba70ef997dff7/9e8ca3d4d_Medial.jpg" alt="Medial" loading="lazy"></a>
+          <a class="logo-tile" href="https://bonegraft.com.tr/" target="_blank" rel="noopener" title="Bonegraft"><img src="https://media.base44.com/images/public/6a82005a72dba70ef997dff7/824f9a044_Bonegraft.jpg" alt="Bonegraft" loading="lazy"></a>
       </div>
     </div>
   </section>
