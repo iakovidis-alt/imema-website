@@ -104,7 +104,9 @@
   .cap .num { color: var(--blue); }
   .cap h3 { font-weight: 400; font-size: clamp(22px, 2.6vw, 32px); text-transform: uppercase; letter-spacing: -.01em; }
   .cap p { color: var(--muted); }
-  .cap .arr { color: var(--blue); text-align: right; font-size: 20px; }
+  .cap .arr { color: var(--blue); text-align: right; font-size: 20px; transition: transform .25s; }
+  .cap:hover .arr { transform: translateX(6px); }
+  .cap:hover h3 { color: var(--blue); }
   @media (max-width: 860px) { .cap { grid-template-columns: 50px 1fr; } .cap p { grid-column: 2; } .cap .arr { display: none; } }
 
   /* Distributions */
@@ -230,13 +232,13 @@
         <h2>7 disciplines</h2>
       </div>
       <div class="caps">
-        <div class="cap reveal"><span class="mono num">01</span><h3>Cardiovascular</h3><p>Cardiac surgery and perfusion disposables, heart stabilizers, CO2 diffusers, blood salvage, bovine and human pericardium.</p><span class="arr">→</span></div>
-        <div class="cap reveal"><span class="mono num">02</span><h3>Neuro-surgery &amp; Spine</h3><p>Spinal implants, intervertebral cages, suction cannulas, allografts &amp; xenografts, handmade surgical instruments.</p><span class="arr">→</span></div>
-        <div class="cap reveal"><span class="mono num">03</span><h3>Orthopedic &amp; Trauma</h3><p>Intramedullary nails, plates and screws, allografts &amp; xenografts for reconstructive procedures, bone grafts and camera covers.</p><span class="arr">→</span></div>
-        <div class="cap reveal"><span class="mono num">04</span><h3>General Surgery</h3><p>Hernia meshes, hemostatic agents, bipolar forceps.</p><span class="arr">→</span></div>
-        <div class="cap reveal"><span class="mono num">05</span><h3>Plastic Surgery</h3><p>Human and bovine biological grafts, handmade surgical instruments.</p><span class="arr">→</span></div>
-        <div class="cap reveal"><span class="mono num">06</span><h3>ENT</h3><p>Fascia lata, suction cannula kits.</p><span class="arr">→</span></div>
-        <div class="cap reveal"><span class="mono num">07</span><h3>Ophthalmology</h3><p>Human and bovine pericardium.</p><span class="arr">→</span></div>
+        <a class="cap reveal" href="#contact"><span class="mono num">01</span><h3>Cardiovascular</h3><p>Cardiac surgery and perfusion disposables, heart stabilizers, CO2 diffusers, blood salvage, bovine and human pericardium.</p><span class="arr" aria-hidden="true">→</span></a>
+        <a class="cap reveal" href="#contact"><span class="mono num">02</span><h3>Neuro-surgery &amp; Spine</h3><p>Spinal implants, intervertebral cages, suction cannulas, allografts &amp; xenografts, handmade surgical instruments.</p><span class="arr" aria-hidden="true">→</span></a>
+        <a class="cap reveal" href="#contact"><span class="mono num">03</span><h3>Orthopedic &amp; Trauma</h3><p>Intramedullary nails, plates and screws, allografts &amp; xenografts for reconstructive procedures, bone grafts and camera covers.</p><span class="arr" aria-hidden="true">→</span></a>
+        <a class="cap reveal" href="#contact"><span class="mono num">04</span><h3>General Surgery</h3><p>Hernia meshes, hemostatic agents, bipolar forceps.</p><span class="arr" aria-hidden="true">→</span></a>
+        <a class="cap reveal" href="#contact"><span class="mono num">05</span><h3>Plastic Surgery</h3><p>Human and bovine biological grafts, handmade surgical instruments.</p><span class="arr" aria-hidden="true">→</span></a>
+        <a class="cap reveal" href="#contact"><span class="mono num">06</span><h3>ENT</h3><p>Fascia lata, suction cannula kits.</p><span class="arr" aria-hidden="true">→</span></a>
+        <a class="cap reveal" href="#contact"><span class="mono num">07</span><h3>Ophthalmology</h3><p>Human and bovine pericardium.</p><span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
