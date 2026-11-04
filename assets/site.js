@@ -32,8 +32,6 @@
   }
 })();
 
-// Show the page once Tailwind has generated its styles.
-requestAnimationFrame(function () { requestAnimationFrame(function () { document.documentElement.classList.add('tw-ready'); }); });
 
 // Hero parallax, as on the original site: as you scroll through the hero, the
 // background zooms in (data-parallax-scale = extra scale at the end) and the

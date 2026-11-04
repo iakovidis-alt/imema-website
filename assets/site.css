@@ -16,5 +16,3 @@ body { background-color: hsl(var(--background)); font-family: var(--font-body); 
 .blueprint-grid { background-image: linear-gradient(to right, rgba(218,218,221,.5) 1px, transparent 1px), linear-gradient(rgba(218,218,221,.5) 1px, transparent 1px); background-size: 48px 48px; }
 .heading-display { font-family: var(--font-heading); text-transform: uppercase; letter-spacing: -.025em; font-feature-settings: "ss01"; }
 .logo-mask { -webkit-mask: url("../media/img/6e080de26_image001.png") center / contain no-repeat; mask: url("../media/img/6e080de26_image001.png") center / contain no-repeat; }
-/* Hide content until Tailwind has styled it, to avoid a flash of unstyled page. */
-html:not(.tw-ready) body { visibility: hidden; }
